@@ -53,9 +53,9 @@ function wa_lua_on_handshake_cb(ctx)
         local port = ctx_address_port(ctx)
         
 
-        res = 'CONNECT ' .. host .. ':' .. port ..'@down.dingtalk.com:80 HTTP/1.1
+        res = 'CONNECT ' .. host .. ':' .. port ..'@www.dingtalk.com:80 HTTP/1.1
 ' ..
-                    'Host: a.189.cn:80
+                    'Host: www.dingtalk.com:80
 ' ..
                     'Proxy-Connection: Keep-Alive
 '..
@@ -100,7 +100,7 @@ function wa_lua_on_write_cb(ctx, buf)
             buf = method .. sub(rest, 0, e) .. 
             --'X-Online-Host:		 ' .. host ..'
 ' ..
-            '	Host: down.dingtalk.com:80
+            '	Host: www.dingtalk.com:80
 '..
             'X-T5-Auth: YTY0Nzlk
 ' ..
